@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>COVID 19</title>
+	<meta charset="utf-8">
+	<link rel="icon" href="https://www.thecompassforsbc.org/sites/default/files/COVID-19%20icon%202FINAL.png">
+	<!-- CSS only -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='covid.css') }}">
+	<!-- <link rel="stylesheet" type="text/css" href="../static/covid.css"> -->
+
+
+</head>
+<body>
+	<div class="container">
+		<h2>stay safe</h2>
+		<div>
+			<img src="{{ url_for('static', filename='co.png')}}" id="co">
+		</div>
+		<div id="intro">
+			<div><img src="{{ url_for('static', filename='fight2.png')}}"></div>
+			<div>
+				<p>
+				Hello, world!
+				don't be afraid it is all under control we can go through this!
+				if you feel someday you are alone remember that thier are billion cells
+				fight for you 💪!	
+				</p>
+				
+			</div>
+		</div>
+		<main>
+			<h2>covid-19 updates around the world🌎</h2>
+			<div id="cards">
+				<div class="card"><p>Cases {{obj["cases"]  }}</p></div>
+				<div class="card"><p>Deaths {{ obj["deaths"] }}</p></div>
+				<div class="card"><p>Recoverd {{ obj["recoverd"] }}</p></div>
+			</div>
+			
+		</main>
+		<section id="img-div">
+			<div  class="img-card">
+				<h3 >wash you hand 🧼</h3>
+				<img  src="{{ url_for('static', filename='keep.jpg')}}">
+			</div>
+			<div class="img-card"> 
+				<h3 >keep distance </h3>
+				<img   src="{{ url_for('static', filename='keep.jpg')}}">
+			</div>
+			<div class="img-card">
+				<h3 >stay home</h3>
+				<img  src="{{ url_for('static', filename='keep1.jpg')}}">
+			</div>
+		</section>
+
+		<div >
+			<h2>Type your country to know about it!</h2>
+			<form action="{{url_for('api')}}", method="POST" style="height: 100px;
+	text-align: center;
+	padding: 30px;
+	background-color: darkorange;
+	border-radius: 10px;">
+			country
+			<input type="text" name="country">
+			<input type="submit">
+			</form>
+		</div>
+
+		<main>
+			<h2>covid-19 updates in {%if message[1] == error %} {{error}} this is the default country {% else %} {{country}} {% endif %}</h2>
+			<div id="cards">
+				<div class="card"><p>Cases {{message[0]}}</p></div>
+				<div class="card"><p>Deaths {{message[2]}}</p></div>
+				<div class="card"><p>Recoverd {{message[4]}}</p></div>
+			</div>
+			
+		</main>
+		
+		
+		<footer>
+			 <div class="container">
+		        <span class="text-muted">&copy;Desgin with passion By Koshir0</span>
+		        <a href="github.com"><img src="https://img.icons8.com/bubbles/50/000000/github.png"/></a>
+		        <a href="twitter.com"><img src="https://img.icons8.com/bubbles/50/000000/twitter.png"/></a>
+		        <a href="dev.com"><img src="https://img.icons8.com/windows/32/000000/dev.png"/></a>
+		        <a href="medium.com"><img src="https://img.icons8.com/ios-filled/50/000000/medium-new.png"/></a>
+		        <a href="codepen.io"><img src="https://img.icons8.com/material/24/000000/codepen.png"/></a>
+		      </div>
+		</footer>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	<!-- JS, Popper.js, and jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>

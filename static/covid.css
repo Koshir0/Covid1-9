@@ -1,0 +1,175 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Bangers', cursive;
+	margin: 0;
+	background-color: #ffc333;
+}
+
+#intro{
+	display: flex;
+	margin-top:10px;
+	
+}
+#intro img{
+	width: 500px;
+	height: 100vh;
+	/*border: 1px solid darkorange;*/
+
+
+}
+#intro p{
+	padding: 20px;
+	font-size: 3rem;
+	border:1px solid darkorange;
+	height: 100vh;
+	overflow: hidden;
+	box-shadow: 5px 10px darkorange;
+}
+#intro p:hover{
+	letter-spacing: 5px;
+	transition: .5s letter-spacing ease-in;
+	
+}
+#intro p::selection{
+	color: white;
+	background-color: yellow;
+	
+}
+
+#co{
+	width: 100%;
+	/*border:1px solid darkorange;*/
+	height: auto;
+}
+
+/*main style*/
+/*main{
+	height: 100vh;
+}*/
+h2{
+	margin: 50px auto;
+	font-size: 100px;
+	width: auto;
+	text-align: center;
+	border:1px solid darkorange;
+	box-shadow: 5px 10px darkorange;
+
+}
+h2:hover{
+	letter-spacing: 5px;
+	transition: .5s letter-spacing ease-in;
+}
+h2::selection{
+	color: white;
+	background-color: yellow;
+	
+}
+#cards{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	
+}
+#cards .card{
+	width: 300px;
+	height: 300px;
+	border: 1px solid darkorange;
+	margin: 30px;
+	border-radius: 10px;
+	
+
+
+}
+
+
+#cards .card p{
+	font-size: 2em;
+	margin: 120px auto;
+}
+#cards .card p:hover{
+	letter-spacing: 5px;
+	transition: .5s letter-spacing ease-in;
+}
+
+/*section style*/
+.img-button:hover{
+	letter-spacing: 5px;
+	transition: .5s letter-spacing ease-in;
+}
+#img-div{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	/*border: 1px solid darkorange;*/
+
+}
+.img-card img{
+	width: 300px;
+	height: 300px;
+	border: 1px solid darkorange;
+	margin: 30px;
+	border-radius: 10px;
+}
+h3{
+	margin: 50px auto;
+	font-size: 50px;
+	width: auto;
+	text-align: center;
+	border:1px solid darkorange;
+	box-shadow: 5px 10px darkorange;
+	margin-right: 10px;
+
+}
+h3:hover{
+	letter-spacing: 5px;
+	transition: .5s letter-spacing ease-in;
+}
+h3::selection{
+	color: white;
+	background-color: yellow;
+	
+}
+
+/*footer style*/
+footer .container{
+	border: 1px solid darkorange;
+	height: 50px;
+}
+
+/*#form-div form{
+	border: 2px solid darkorange;
+	width: 100%;
+	height: 100px;
+	text-align: center;
+	padding: 30px;
+	background-color: darkorange;
+	border-radius: 10px;
+}*/
+
+@media screen and (max-width: 1000px) {
+#intro{
+		flex-direction: column;
+	}
+	#intro img{
+		align-self:  center;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	#intro p{
+		height: auto;
+	}
+	#img-div, #cards .card, footer{
+		/*border:1px solid darkorange;*/
+		width: 100%;
+	}
+	#img-div img{
+		width: 100%;
+		margin: 0 auto;
+	}
+
+
+}

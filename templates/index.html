@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>COVID-19</title>
+
+  <style>
+  body{
+  		
+  	}
+  	*, *::before, *::after{
+  		box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+  	}
+    section{
+      width: 100%;
+      height: 100vh;
+      
+      background-color:#11bbdc;
+    }
+    .cards{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    }
+.card{
+  width:250px;
+  height: 250px;
+ border-radius: 20px;
+  background-color: white;
+  font-family: Arial;
+  box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.75);
+}
+
+
+  	.container{
+  		width: 100%;
+  		height: 100vh;
+  		display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      background-color:#ffc333;
+  	}
+    ul li{
+      list-style-type: none;
+      font-family: 'Press Start 2P', cursive;
+      font-size:1rem;
+
+    }
+
+#logo{
+  height: 500px;
+  margin-left: 3rem ;  
+}
+
+#coronalogo{
+  width: 200px;
+  height: 150px;
+  text-align: center;
+  
+}
+#thumb{
+
+  text-align: center;
+  
+}
+#intro{
+  
+   width: 50%;
+  height: auto;
+  border-right:3px solid black;
+  border-bottom:3px solid black;
+  box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.75);
+  position: relative;
+}
+
+@media screen and (max-width: 950px) {
+     .container{
+      width: 100vw;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      background-color:#ffc333;
+    }
+    h1{
+  font-size:2rem;
+}
+#thumb{
+
+display: none;  
+}
+ }
+
+ @media screen and (max-width: 550px) {
+    #intro{
+  width: 70%;
+  height: 70%;
+  border-right:3px solid black;
+  border-bottom:3px solid black;
+  box-shadow: 10px 10px 0px 0px rgba(0,0,0,0.75);
+  position: relative;
+}
+#thumb{
+
+display: none;  
+}
+ }
+
+
+
+.headline{
+  padding-top: 40px;
+  text-align: center;
+  font-family: Arial;
+  font-size: 3rem;
+  bottom: 1px;
+  
+}
+
+
+
+  </style>
+  </head>
+<body>
+  <div class="container">
+  	
+    <div id="intro">
+     
+      <h1 >The WHO is advising people to follow five simple steps to help prevent the spread of COVID-19:</h1>
+      <ul>
+        <li>🧼 1. Wash your hands</li>
+      <li>💪 2. Cough/sneeze into your elbow</li>
+      <li>🤦🏻‍♀️ 3. Don't touch your face</li>
+      <!-- <li>📏 4. rm -rf node_modules && npm i</li> -->
+      <li>🏡 4. Stay home if you feel sick</li>
+      </ul>
+  
+      <div id="thumb"><img id="coronalogo"  src="coronalogo.png"></div>
+    </div>
+
+    <div >
+     <img id="logo"src="fight2.png" alt=""> 
+    </div>
+
+    
+  </div>
+
+
+<section>
+  <h1 class="headline">The Latest Update About COVID-19 All Around The World</h1>
+  <section class="cards">
+    <div class="card" >
+    Cases:{{obj["cases"]  }}
+  </div>
+  <div class="card">Deaths{{ obj["deaths"] }}</div>
+  <div class="card">Recoverd:{{ obj["recoverd"] }}</div>
+  </section>
+  
+</section>
+<!-- <div class="lastnews">
+      
+      <div class="cards"></div>
+      <div class="cards"></div>
+      <div class="cards"></div>
+    </div> -->
+    <!-- <div class="jcorona">
+      {{message}}
+    </div> -->
+</body>
+</html>
+
+
+
+  
+
+
+
